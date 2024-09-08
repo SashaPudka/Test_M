@@ -77,7 +77,116 @@
 		color: #3c96e2;
 		text-decoration: underline
 	}
-	
+	.star-container {
+    display: flex;
+    justify-content: center;
+    }
+
+    .star {
+    fill: #333333;
+    margin: 0 10px;
+    transition: all 0.5s ease;
+    }
+
+    .star:hover {
+    fill: #ffca18;
+    scale: 1.2;
+    transition: all 0.5s ease;
+    }
+	.input-at {
+    display: block;
+    background: transparent;
+    color: #0000005f;
+	border: 1px solid #605e58;
+    }
+	textarea.input-at {
+	width: 490px;
+    min-height: 40px;
+    padding: 18px 20px;
+    font-size: 12px;
+    line-height: 20px;
+	border: 1.5px solid #ccccccc4;
+    border-radius: 3px;
+	resize: none;
+    }
+    #myCheckbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc; 
+    }
+    #myCheckbox:checked {
+    background-color: #ffffff; 
+	background-image: url('https://img.icons8.com/?size=100&id=6Dz9xBnxD2Il&format=png&color=000000');
+	background-size: contain;
+    }
+    #myCheckbox::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 14px;
+    height: 9px;
+    transform: rotate(45deg);
+    transition: all 0.2s;
+    }
+
+	.group {
+	flex-direction: row;
+    align-items: center;
+	justify-content: space-between;
+	display: -webkit-inline-flex;
+    display: inline-flex;
+	width: calc(50% - 90px);
+	height: 35px;
+	padding: 10px;
+	}
+	.field {
+    height: 30px;
+    border: 1.5px solid #ccccccc4;
+    border-radius: 3px;
+    margin-top: 8px;
+    padding-left: 10px;
+    background: transparent;
+	}
+
+	.button_bg:focus {
+	background-color: #ffca18;
+	}
+	.rules_input {
+	opacity: 0;
+    position: absolute;
+    pointer-events: none;
+	}
+	.rules {
+	display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+	padding-top:15px;
+	padding-bottom:5px;
+	font-size:14px;
+	line-height:20px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#000105;
+	text-align:justify;
+	}
+	.rules_input:focus ~ label {
+    outline: -webkit-focus-ring-color auto 5px;
+    }
+    .rules_input:checked + .rules {
+    -webkit-line-clamp: unset;
+    }
+    .rules_input:checked ~ label {
+    display: none;
+    }
+	.label_rules {
+	color:#ffca18;
+	font-weight: 200;
+	margin-left: 40%
+	}
+
+
 	@media only screen and (max-device-width:480px) {
 		body[yahoo] #container1 {
 			display: block!important
@@ -819,7 +928,7 @@
 																							<table width="100%" border="0" cellpadding="0" cellspacing="0">
 																								<tbody>
 																									<tr>
-																										<td height="143" style="font-size: 18px; line-height: 24px; font-family: Arial, Helvetica, sans-serif; color:#000000; text-align: center;">				<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/pmaSAA/T53qpUyQ04EJTNqB/?u=https%3A%2F%2Fluga.petrovich.ru%2Fcatalog%2F19104%2F600846%2F%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank"><img style="vertical-align: top; border: none; width: 100%; max-width: 141px; height: auto; max-height: 141px;" height="141" src="https://cs.petrovich.ru/images/1218560/original-150x150-fit.jpg" alt="Изображение товара"></a></td></tr>
+																										<td height="143" style="font-size: 18px; line-height: 24px; font-family: Arial, Helvetica, sans-serif; color:#000000; text-align: center;"><a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/pmaSAA/T53qpUyQ04EJTNqB/?u=https%3A%2F%2Fluga.petrovich.ru%2Fcatalog%2F19104%2F600846%2F%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank"><img style="vertical-align: top; border: none; width: 100%; max-width: 141px; height: auto; max-height: 141px;" height="141" src="https://cs.petrovich.ru/images/1218560/original-150x150-fit.jpg" alt="Изображение товара"></a></td></tr>
 																								</tbody>
 																							</table>
 																						</td>
@@ -848,7 +957,7 @@
 																									
 												
 												
-												</tr> 
+												                                                   </tr> 
 																									<tr>
 																										<td align="center" style="font-size: 16px; line-height: 21px; font-family: Arial, Helvetica, sans-serif; color:#000000;">
 																											
@@ -864,317 +973,386 @@
 																			</table>
 																		</td>
 																	</tr>
+																	
 																</tbody>
 															</table>
 														</div>
-														
-														
-														
+
 													
-																									<tr>
-																										<td align="left" style="padding-bottom: 6px;">
-																											<table border="0" cellpadding="0" cellspacing="0">
-																												<tbody>
-																													<tr>
-																															</tr>
-																												</tbody>
-																											</table>
-																										</td>
-																									</tr>
-																									<tr>
-															
-														
-														
-														</tr> 
-																									<tr>
-																										<td align="center" style="font-size: 16px; line-height: 21px; font-family: Arial, Helvetica, sans-serif; color:#000000;">
-																											
-																										<!--[if mso]> </center> </v:roundrect> <![endif]-->
-																										</td>
-																									</tr>
 																								</tbody>
 																							</table>
 																						</td>
 																					</tr>
-																				</tbody>
-																			</table>
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-														
-														
-														
-													
-																									<tr>
-																										<td align="left" style="padding-bottom: 6px;">
-																											<table border="0" cellpadding="0" cellspacing="0">
-																												<tbody>
-																													<tr>
-																															</tr>
-																												</tbody>
-																											</table>
-																										</td>
-																									</tr>
-																									<tr>
-															
-														
-														
-														</tr> 
-																									<tr>
-																										<td align="center" style="font-size: 16px; line-height: 21px; font-family: Arial, Helvetica, sans-serif; color:#000000;">
-																											
-																										<!--[if mso]> </center> </v:roundrect> <![endif]-->
-																										</td>
-																									</tr>
-																								</tbody>
-																							</table>
-																						</td>
-																					</tr>
-																				</tbody>
-																			</table>
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-														
-														
-														
-														<!--[if gte mso 9]> </td></tr></table> <![endif]--> </td>
-												</tr>
-											</tbody>
-										</table>
-										<!--[if gte mso 9]> </td></tr></table> <![endif]-->
-									</td>
-								</tr>
-						
-								
-							
-								<tr>
-									<td align="center" style="padding-bottom:50px">
-										<table cellpadding="0" cellspacing="0">
-											<tbody>
-												<tr>
-													<td bgcolor="#ffca06" align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:21px;color:#000;mso-padding-alt:11px 30px;border-radius:4px"><a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/qGaSAA/_Vu7f9YfsruJQFak/?u=https%3A%2F%2Fluga.petrovich.ru%2Fcatalog%2F18978%2Fdewalt%2F%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" style="text-decoration:none;color:#000;display:block;padding:11px 30px" target="_blank">Все инструменты DeWalt</a></td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								
-								 <!--one item block end-->
-									<tr>
-									<td align="center" style="padding-left:10px;padding-right:10px;padding-bottom:24px">
-										<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
-										<table width="500" style="width:100%;max-width:500px" cellspacing="0" cellpadding="0" border="0">
-											<tbody>
-												<tr>
-													<td style="font-size:24px;line-height:30px;font-family:Arial,Helvetica,sans-serif;color:#414141;text-align:left"><strong>Как оставить отзыв? </strong></td>
-												</tr>
-											</tbody>
-										</table>
-										<!--[if gte mso 10]></td></tr></table><![endif]-->
-									</td>
-								</tr>
-									<tr>
-									<td align="center" style="padding-left:10px;padding-right:10px;padding-bottom:24px">
-										<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
-										<table width="500" style="width:100%;max-width:500px" cellspacing="0" cellpadding="0" border="0">
-											<tbody>
-												<tr>
-													<td style="font-size:16px;line-height:23px;font-family:Arial,Helvetica,sans-serif;color:#414141;text-align:left">
-													 Зайдите на&nbsp;страницу товара, пролистайте страницу к&nbsp;вопросам и&nbsp;отзывам, нажмите на&nbsp;кнопку &laquo;Оставить отзыв&raquo; и&nbsp;заполните все поля.</td>
-												</tr>
-											</tbody>
-										</table>
-										<!--[if gte mso 10]></td></tr></table><![endif]-->
-									</td>
-								</tr>
-									<tr>
-									<td align="center" style="font-size:21px;line-height:30px;font-family:Arial,Helvetica,sans-serif;color:#000105 ;padding-bottom:36px">
-										<img style="display:block;border:none;width:100%;max-width:450px;height:auto" width="450" src="https://images.mindbox.ru/campaigns/249284/837860/8.PNG" alt="">
-									</td>
-								</tr>
-								<tr>
-									<td background="https://images.mindbox.ru/campaigns/249284/837860/2.png" bgcolor="#FFCD10" height="94" style="background:url(&quot;https://images.mindbox.ru/campaigns/249284/837860/2.png&quot;) center top;background-color:#FFCD10" valign="top" width="600">
-										<!--[if gte mso 9]><v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage2" style="behavior: url(&quot;https://images.mindbox.ru/campaigns/249284/837860/4&quot;); display: inline-block; position: absolute; width: 600px; height: 94px; top: 0; left: 0; border: 0; z-index: 1;" src="https://images.mindbox.ru/campaigns/249284/837860/2.png"   />
-                                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display: inline-block; position: absolute; width: 600px; height: 94px; top: 0; left: 0; border: 0; z-index: 2;">
-                                        <v:fill opacity="0%" style="z-index: 1;"  /><![endif]-->
-										<table border="0" cellpadding="0" cellspacing="0" width="100%">
-											<tbody>
-												<tr>
-													<td align="center" height="94" valign="middle" style="padding-left:10px;padding-right:10px">
-														<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
-														<table class="flexible" width="500" style="width:100%;max-width:500px" border="0" cellpadding="0" cellspacing="0">
-															<tbody>
-																<tr>
-																	<td align="center" style="font-size:0;text-align:center;padding-top:8px;padding-bottom:8px">
-																		<!--[if gte mso 9]><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="40%" align="left"><![endif]-->
-																		<div class="flexible" style="display:inline-block;vertical-align:top;width:40%;min-width:180px">
-																			<table width="100%" cellspacing="0" cellpadding="0" border="0">
-																				<tbody>
 																					<tr>
-																						<td class="ac" style="padding-top:5px;padding-bottom:5px;padding-right:5px;font-size:17px;line-height:21px;font-family:Arial,Helvetica,sans-serif;color:#000;text-align:left"><strong>Показываем <span style="white-space:nowrap">и&nbsp;рассказываем</span></strong></td>
-																					</tr>
-																				</tbody>
-																			</table>
-																		</div>
-																		<!--[if gte mso 9]></td><td valign="top" width="60%" align="center"><![endif]-->
-																		<div class="flexible" style="display:inline-block;vertical-align:top;width:60%;min-width:290px">
-																			<table width="100%" cellspacing="0" cellpadding="0" border="0">
-																				<tbody>
-																					<tr>
-																						<td align="right" style="padding-left:3px;padding-top:5px;padding-bottom:5px">
-																							<!--[if (gte mso 9)|(IE)]><table width="290" cellspacing="0" cellpadding="0" border="0"><tr><td><![endif]-->
-																							<table class="flexible" width="290" border="0" cellpadding="0" cellspacing="0">
+																						<td align="center" style="padding-bottom:50px">
+																							<table cellpadding="0" cellspacing="0">
 																								<tbody>
 																									<tr>
-																										<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
-																											<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/qWaSAA/1MzzNvWE8BqqNc5s/?u=https%3A%2F%2Fvk.com%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/7.png" alt="Vk"></a>
-																										</td>
-																										<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
-																											<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/qmaSAA/Y8w5xfYDNrBF5z8d/?u=https%3A%2F%2Fwww.instagram.com%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/10.png" alt="Instagramm"></a>
-																										</td>
-																										<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
-																											<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/q2aSAA/xSaHEbbmmj0-yuei/?u=https%3A%2F%2Fok.ru%2Fgroup%2F53628621619379%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/1.png" alt="Ok"></a>
-																										</td>
-																										<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
-																											<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/rGaSAA/BKTkCmD0a3rszk8F/?u=https%3A%2F%2Fwww.youtube.com%2Fuser%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/12.png" alt="YouTube"></a>
-																										</td>
-																										<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
-																											<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/rWaSAA/v_HhbDSWBCG_Ukvf/?u=https%3A%2F%2Fwww.facebook.com%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/9.png" alt="Facebook"></a>
+																										<td bgcolor="#ffca06" align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:21px;color:#000;mso-padding-alt:11px 30px;border-radius:4px"><a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/qGaSAA/_Vu7f9YfsruJQFak/?u=https%3A%2F%2Fluga.petrovich.ru%2Fcatalog%2F18978%2Fdewalt%2F%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" style="text-decoration:none;color:#000;display:block;padding:11px 30px" target="_blank">Все инструменты DeWalt</a></td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="center" style="padding-left:10px;padding-right:10px;padding-bottom:24px">
+																							<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
+																							<table width="500" style="width:100%;max-width:500px" cellspacing="0" cellpadding="0" border="0">
+																								<tbody>
+																									<tr>
+																										<td style="font-size:24px;line-height:30px;font-family:Arial,Helvetica,sans-serif;color:#414141;text-align:left"><strong>Как оставить отзыв? </strong></td>
+																									</tr>
+																								</tbody>
+																							</table>
+																							<!--[if gte mso 10]></td></tr></table><![endif]-->
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="center" style="padding-left:10px;padding-right:10px;padding-bottom:20px">
+																							<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
+																							<table width="500" style="width:100%;max-width:500px" cellspacing="0" cellpadding="0" border="0">
+																								<tbody>
+																									<tr>
+																										<td style="font-size:16px;line-height:23px;font-family:Arial,Helvetica,sans-serif;color:#414141;text-align:left">
+																										 Зайдите на&nbsp;страницу товара, пролистайте страницу к&nbsp;вопросам и&nbsp;отзывам, нажмите на&nbsp;кнопку &laquo;Оставить отзыв&raquo; и&nbsp;заполните все поля.</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																							<!--[if gte mso 10]></td></tr></table><![endif]-->
+																						</td>
+																					</tr>
+
+														        <!--[new blok]><![new blok]-->
+
+																					<tr>
+																						<td align="center" style="font-size:21px;line-height:30px;font-family:Arial,Helvetica,sans-serif;color:#000105 ;padding-bottom:36px">
+																							<table width="500" style="width:100%;max-width:500px" cellspacing="0" cellpadding="0" border="0">
+																								<tr>
+																									<td align="center" bgcolor="#f1f1f1" style="padding-left:10px;padding-right:10px">
+																										<!--[if (gte mso 9)|(IE)]><table width="400" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" align="center"><![endif]-->
+																										<table width="450" style="width:100%;max-width:450px" cellspacing="0" cellpadding="0" border="0">
+																											<tr>
+																												<td style="padding-top:15px;padding-bottom:5px;font-size:16px;line-height:22px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">Новый отзыв</td>
+																											</tr>
+																											<tr>
+																												<td style="padding-bottom:15px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#00010561;text-align:left">Дрель-шуруповерт аккумуляторная DeWalt DCD771D2 18 B 2.0</td>
+																											</tr>
+																											<tr>
+																												<td style="padding-bottom:15px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">Общее впечатление:</td>
+																											</tr>
+																												<tr class="star-container">
+																													<td class="star">
+																														<svg viewBox="0 0 20 20" width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+																															<path d="M10,1.375 L12.982,7.57 L19.659,7.864 L14.531,12.433 L16.402,18.625 L10,15.244 L3.598,18.625 L5.469,12.433 L0.341,7.864 L7.018,7.57 L10,1.375 Z"/>
+																														</svg>
+																													</td>
+																													<td class="star">
+																														<svg viewBox="0 0 20 20" width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+																															<path d="M10,1.375 L12.982,7.57 L19.659,7.864 L14.531,12.433 L16.402,18.625 L10,15.244 L3.598,18.625 L5.469,12.433 L0.341,7.864 L7.018,7.57 L10,1.375 Z"/>
+																														</svg>
+																													</td>
+																													<td class="star">
+																														<svg viewBox="0 0 20 20" width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+																															<path d="M10,1.375 L12.982,7.57 L19.659,7.864 L14.531,12.433 L16.402,18.625 L10,15.244 L3.598,18.625 L5.469,12.433 L0.341,7.864 L7.018,7.57 L10,1.375 Z"/>
+																														</svg>
+																													</td>
+																													<td class="star">
+																														<svg viewBox="0 0 20 20" width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+																															<path d="M10,1.375 L12.982,7.57 L19.659,7.864 L14.531,12.433 L16.402,18.625 L10,15.244 L3.598,18.625 L5.469,12.433 L0.341,7.864 L7.018,7.57 L10,1.375 Z"/>
+																														</svg>
+																													</td>
+																													<td class="star">
+																														<svg viewBox="0 0 20 20" width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+																															<path d="M10,1.375 L12.982,7.57 L19.659,7.864 L14.531,12.433 L16.402,18.625 L10,15.244 L3.598,18.625 L5.469,12.433 L0.341,7.864 L7.018,7.57 L10,1.375 Z"/>
+																														</svg>
+																													</td>
+																											    </tr>
+																												<tr>
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">Комментарии:</td>
+																												</tr>
+																												<tr>
+																													<td>
+																														<table class="validate-input-at">
+																															<td style="font-size:10px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#414141;text-align:left">
+																														      <textarea class="input-at" name="message-at" placeholder="Опишите подробнее свои впечатления" required></textarea>
+																															</td>
+																														</table>
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">
+																														<label class="checkbox-group">
+																															<input type="checkbox" id="myCheckbox" required>
+																															<span style="display:inline-block;">Рекомендуете данный товар?</span>
+																														  </label>
+																													</td>
+																												</tr>
+                                                                                                             
+																											
+																											
+																											
+																												<tr class="group">
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105">
+																													    <label class="field-group">
+																															<input class="field" name="name" placeholder="Ваше имя" required>
+																														</label>
+																													</td>
+																								                </tr>
+																												<tr class="group">
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">
+																													    <label class="field-group">
+																															<input class="field" name="city" placeholder="Ваш город" required>
+																														</label>
+																													</td>
+																								                </tr>
+																												<tr class="group">
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">
+																													    <label class="field-group">
+																															<input class="field" name="tel" placeholder="Ваш телефон для связи" required>
+																														</label>
+																													</td>
+																								                </tr>
+																											
+																										
+
+											
+
+
+
+
+
+
+                                                                                                                <tr>
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">
+																														<input class="rules_input" type="checkbox" id="expanded" required>
+																														    <p class="rules">Правила публикации пользовательского контента. Как написать хороший отзыв или задать правильный вопрос? Фокусируйте внимание на предмете вашего отзыва. Укажите причину почему эта вещь вам понравилась и вы ей заинтересовались.</p>
+																														<label class="label_rules" for="expanded" role="button">показать правила</label>
+																													</td>																													
+																												</tr>
+																												<tr>
+																													<td style="padding-top:15px;padding-bottom:5px;font-size:14px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#000105;text-align:left">
+																														<label class="checkbox-group">
+																															<input type="checkbox" id="myCheckbox" required>
+																															    <span style="display:inline-block;">Я согласен с правилами публикации пользовательского контента</span>
+																														</label>
+																													</td>
+																												</tr>
+																												<tr>
+																													<td align="right" style="font-size:16px; padding-bottom:10px; line-height:21px; font-family: Arial, Helvetica, sans-serif; color:#000000;">
+																														<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/p2aSAA/tjHAV9plNGi9WOTT/?u=https%3A%2F%2Fluga.petrovich.ru%2Fcatalog%2F19104%2F600846%2F%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" class="button_bg" style="background-color:#ffc9064c;border-radius:3px;color:#000000;display:inline-block;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:36px;text-align:center;text-decoration:none; width:147px;-webkit-text-size-adjust:none;">Отправить отзыв</a>
+																													</td>
+																												</tr>
+																										</table>
+																										<!--[if (gte mso 9)|(IE)]></td>
+																									</tr>
+																									</table><![endif]-->
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+
+																<!--[new blok the end]><![new blok the end]-->
+
+																					<tr>
+																						<td background="https://images.mindbox.ru/campaigns/249284/837860/2.png" bgcolor="#FFCD10" height="94" style="background:url(&quot;https://images.mindbox.ru/campaigns/249284/837860/2.png&quot;) center top;background-color:#FFCD10" valign="top" width="600">
+																							<!--[if gte mso 9]><v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage2" style="behavior: url(&quot;https://images.mindbox.ru/campaigns/249284/837860/4&quot;); display: inline-block; position: absolute; width: 600px; height: 94px; top: 0; left: 0; border: 0; z-index: 1;" src="https://images.mindbox.ru/campaigns/249284/837860/2.png"   />
+																						<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display: inline-block; position: absolute; width: 600px; height: 94px; top: 0; left: 0; border: 0; z-index: 2;">
+																							<v:fill opacity="0%" style="z-index: 1;"  /><![endif]-->
+																							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																								<tbody>
+																									<tr>
+																										<td align="center" height="94" valign="middle" style="padding-left:10px;padding-right:10px">
+																											<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
+																											<table class="flexible" width="500" style="width:100%;max-width:500px" border="0" cellpadding="0" cellspacing="0">
+																												<tbody>
+																													<tr>
+																														<td align="center" style="font-size:0;text-align:center;padding-top:8px;padding-bottom:8px">
+																															<!--[if gte mso 9]><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="40%" align="left"><![endif]-->
+																															<div class="flexible" style="display:inline-block;vertical-align:top;width:40%;min-width:180px">
+																																<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																																	<tbody>
+																																		<tr>
+																																			<td class="ac" style="padding-top:5px;padding-bottom:5px;padding-right:5px;font-size:17px;line-height:21px;font-family:Arial,Helvetica,sans-serif;color:#000;text-align:left"><strong>Показываем <span style="white-space:nowrap">и&nbsp;рассказываем</span></strong></td>
+																																		</tr>
+																																	</tbody>
+																																</table>
+																															</div>
+																															<!--[if gte mso 9]></td><td valign="top" width="60%" align="center"><![endif]-->
+																															<div class="flexible" style="display:inline-block;vertical-align:top;width:60%;min-width:290px">
+																																<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																																	<tbody>
+																																		<tr>
+																																			<td align="right" style="padding-left:3px;padding-top:5px;padding-bottom:5px">
+																																				<!--[if (gte mso 9)|(IE)]><table width="290" cellspacing="0" cellpadding="0" border="0"><tr><td><![endif]-->
+																																				<table class="flexible" width="290" border="0" cellpadding="0" cellspacing="0">
+																																					<tbody>
+																																						<tr>
+																																							<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
+																																								<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/qWaSAA/1MzzNvWE8BqqNc5s/?u=https%3A%2F%2Fvk.com%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/7.png" alt="Vk"></a>
+																																							</td>
+																																							<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
+																																								<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/qmaSAA/Y8w5xfYDNrBF5z8d/?u=https%3A%2F%2Fwww.instagram.com%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/10.png" alt="Instagramm"></a>
+																																							</td>
+																																							<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
+																																								<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/q2aSAA/xSaHEbbmmj0-yuei/?u=https%3A%2F%2Fok.ru%2Fgroup%2F53628621619379%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/1.png" alt="Ok"></a>
+																																							</td>
+																																							<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
+																																								<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/rGaSAA/BKTkCmD0a3rszk8F/?u=https%3A%2F%2Fwww.youtube.com%2Fuser%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/12.png" alt="YouTube"></a>
+																																							</td>
+																																							<td align="center" style="padding-left:2px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22">
+																																								<a href="https://mindbox.ru/xM0DAAAAAMgqsDkG/rWaSAA/v_HhbDSWBCG_Ukvf/?u=https%3A%2F%2Fwww.facebook.com%2Fpetrovichstd%3Futm_source%3Dmindbox%26utm_medium%3Demail%26utm_campaign%3DDevoltKonkursTest&amp;debug=true" target="_blank" style="color:#fff;text-decoration:underline"><img style="display:block;border:none;width:37px;max-width:100%;height:auto;max-height:37px" width="37" src="https://images.mindbox.ru/campaigns/249284/837860/9.png" alt="Facebook"></a>
+																																							</td>
+																																						</tr>
+																																					</tbody>
+																																				</table>
+																																				<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+																																			</td>
+																																		</tr>
+																																	</tbody>
+																																</table>
+																															</div>
+																															<!--[if gte mso 9]></td></tr></table><![endif]-->
+																														</td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											<!--[if gte mso 10]></td></tr></table><![endif]-->
 																										</td>
 																									</tr>
 																								</tbody>
 																							</table>
-																							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+																							<!--[if gte mso 9]></v:rect><![endif]-->
+																						</td>
+																					</tr>
+																					<tr>
+																						<td bgcolor="#272626" style="padding-top:25px;padding-bottom:36px">
+																							<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																								<tbody>
+																									<tr>
+																										<td align="center" style="padding-left:10px;padding-right:10px">
+																											<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
+																											<table width="500" style="width:100%;max-width:500px" border="0" cellpadding="0" cellspacing="0">
+																												<tbody>
+																													<tr>
+																														<td style="font-size:0;text-align:center;padding-bottom:15px">
+																															<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50%" align="left"><![endif]-->
+																															<div class="flexible" style="display:inline-block;vertical-align:top;width:55%;min-width:210px">
+																																<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																																	<tbody>
+																																		<tr>
+																																			<td align="left">
+																																				<table class="flexible" width="220" cellspacing="0" cellpadding="0" border="0">
+																																					<tbody></tbody>
+																																				</table>
+																																			</td>
+																																		</tr>
+																																	</tbody>
+																																</table>
+																															</div>
+																															<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%" align="left"><![endif]-->
+																															<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+																														</td>
+																													</tr>
+																													<tr>
+																														<td style="padding-left:10px;padding-bottom:36px;padding-right:10px;font-size:17px;line-height:18px;font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:center"><strong>Ваша карта Клуба Друзей: 5454</strong></td>
+																													</tr>
+																													<tr>
+																														<td align="center" style="padding-left:2px;padding-bottom:38px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22"><img style="display:block;border:none;max-width:100%;height:auto;max-height:140px" src="https://images.mindbox.ru/campaigns/249284/837860/6.png" alt="Карта Клуба Друзей"></td>
+																													</tr>
+																													<tr>
+																														<td bgcolor="#272626" style="padding-top:25px;padding-bottom:36px">
+																															<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																																<tbody>
+																																	<tr>
+																																		<td align="center" style="padding-left:10px;padding-right:10px">
+																																			<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
+																																			<table width="500" style="width:100%;max-width:500px" border="0" cellpadding="0" cellspacing="0">
+																																				<tbody>
+																																					<tr>
+																																						<td style="font-size:0;text-align:center;padding-bottom:15px">
+																																							<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50%" align="left"><![endif]-->
+																																							<div class="flexible" style="display:inline-block;vertical-align:top;width:55%;min-width:210px">
+																																								<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																																									<tbody>
+																																										<tr>
+																																											<td align="left">
+																																												<table class="flexible" width="220" cellspacing="0" cellpadding="0" border="0">
+																																													<tbody>
+																																														<tr>
+																																															<td class="ac" style="padding-bottom:28px;font-size:17px;line-height:21px;font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:left"><strong>Звоните нам по любым вопросам</strong></td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</td>
+																																										</tr>
+																																									</tbody>
+																																								</table>
+																																							</div>
+																																							<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%" align="left"><![endif]-->
+																																							<div class="flexible" style="display:inline-block;vertical-align:top;width:45%;min-width:210px">
+																																								<table width="100%" cellspacing="0" cellpadding="0" border="0">
+																																									<tbody>
+																																										<tr>
+																																											<td align="left" style="padding-bottom:28px">
+																																												<table class="flexible" border="0" cellpadding="0" cellspacing="0">
+																																													<tbody>
+																																														<tr>
+																																															<td class="ac" style="font-size:20px;line-height:26px;font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:left"><strong>8 (81372) 50-899 </strong></td>
+																																														</tr>
+																																														<tr>
+																																															<td class="ac" style="font-size:14px;line-height:24px;font-family:Arial,Helvetica,sans-serif;color:#8c8c8c;text-align:left">Круглосуточный Call-центр</td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</td>
+																																										</tr>
+																																									</tbody>
+																																								</table>
+																																							</div>
+																																							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+																																						</td>
+																																					</tr>
+																																				
+																																				</tbody>
+																																			</table>
+																																			<!--[if gte mso 10]></td></tr></table><![endif]-->
+																																		</td>
+																																	</tr>
+																																</tbody>
+																															</table>
+																														</td>
+																													</tr>
+																												</tbody>
+																											</table>
+																										</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																							<!--[if gte mso 10]></td></tr></table><![endif]-->
 																						</td>
 																					</tr>
 																				</tbody>
 																			</table>
-																		</div>
-																		<!--[if gte mso 9]></td></tr></table><![endif]-->
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														<!--[if gte mso 10]></td></tr></table><![endif]-->
-													</td>
-												</tr>
-											</tbody>
-										</table>
-										<!--[if gte mso 9]></v:rect><![endif]-->
-									</td>
-								</tr>
-								<tr>
-									<td bgcolor="#272626" style="padding-top:25px;padding-bottom:36px">
-										<table width="100%" cellspacing="0" cellpadding="0" border="0">
-											<tbody>
-												<tr>
-													<td align="center" style="padding-left:10px;padding-right:10px">
-														<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
-														<table width="500" style="width:100%;max-width:500px" border="0" cellpadding="0" cellspacing="0">
-															<tbody>
-																<tr>
-																	<td style="font-size:0;text-align:center;padding-bottom:15px">
-																		<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50%" align="left"><![endif]-->
-																		<div class="flexible" style="display:inline-block;vertical-align:top;width:55%;min-width:210px">
-																			<table width="100%" cellspacing="0" cellpadding="0" border="0">
-																				<tbody>
-																					<tr>
-																						<td align="left">
-																							<table class="flexible" width="220" cellspacing="0" cellpadding="0" border="0">
-																								<tbody></tbody>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													
+																								</tbody>
 																							</table>
 																						</td>
 																					</tr>
 																				</tbody>
 																			</table>
-																		</div>
-																		<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%" align="left"><![endif]-->
-																		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-																	</td>
-																</tr>
-																<tr>
-																	<td style="padding-left:10px;padding-bottom:36px;padding-right:10px;font-size:17px;line-height:18px;font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:center"><strong>Ваша карта Клуба Друзей: 5454</strong></td>
-																</tr>
-																<tr>
-																	<td align="center" style="padding-left:2px;padding-bottom:38px;padding-right:2px;font-size:16px;line-height:20px;font-family:Arial,Helvetica,sans-serif;color:#82ba22"><img style="display:block;border:none;max-width:100%;height:auto;max-height:140px" src="https://images.mindbox.ru/campaigns/249284/837860/6.png" alt="Карта Клуба Друзей"></td>
-																</tr>
-																<tr>
-																	<td bgcolor="#272626" style="padding-top:25px;padding-bottom:36px">
-																		<table width="100%" cellspacing="0" cellpadding="0" border="0">
-																			<tbody>
-																				<tr>
-																					<td align="center" style="padding-left:10px;padding-right:10px">
-																						<!--[if gte mso 10]><table width="500" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
-																						<table width="500" style="width:100%;max-width:500px" border="0" cellpadding="0" cellspacing="0">
-																							<tbody>
-																								<tr>
-																									<td style="font-size:0;text-align:center;padding-bottom:15px">
-																										<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50%" align="left"><![endif]-->
-																										<div class="flexible" style="display:inline-block;vertical-align:top;width:55%;min-width:210px">
-																											<table width="100%" cellspacing="0" cellpadding="0" border="0">
-																												<tbody>
-																													<tr>
-																														<td align="left">
-																															<table class="flexible" width="220" cellspacing="0" cellpadding="0" border="0">
-																																<tbody>
-																																	<tr>
-																																		<td class="ac" style="padding-bottom:28px;font-size:17px;line-height:21px;font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:left"><strong>Звоните нам по любым вопросам</strong></td>
-																																	</tr>
-																																</tbody>
-																															</table>
-																														</td>
-																													</tr>
-																												</tbody>
-																											</table>
-																										</div>
-																										<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%" align="left"><![endif]-->
-																										<div class="flexible" style="display:inline-block;vertical-align:top;width:45%;min-width:210px">
-																											<table width="100%" cellspacing="0" cellpadding="0" border="0">
-																												<tbody>
-																													<tr>
-																														<td align="left" style="padding-bottom:28px">
-																															<table class="flexible" border="0" cellpadding="0" cellspacing="0">
-																																<tbody>
-																																	<tr>
-																																		<td class="ac" style="font-size:20px;line-height:26px;font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:left"><strong>8 (81372) 50-899 </strong></td>
-																																	</tr>
-																																	<tr>
-																																		<td class="ac" style="font-size:14px;line-height:24px;font-family:Arial,Helvetica,sans-serif;color:#8c8c8c;text-align:left">Круглосуточный Call-центр</td>
-																																	</tr>
-																																</tbody>
-																															</table>
-																														</td>
-																													</tr>
-																												</tbody>
-																											</table>
-																										</div>
-																										<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-																									</td>
-																								</tr>
-																							
-																							</tbody>
-																						</table>
-																						<!--[if gte mso 10]></td></tr></table><![endif]-->
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-										<!--[if gte mso 10]></td></tr></table><![endif]-->
-									</td>
-								</tr>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+									                </td>
+								                </tr>
 							</table>
 						</td>
 					</tr>
